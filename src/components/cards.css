@@ -1,0 +1,21 @@
+h1 {
+    margin: 2rem 0;
+}
+
+.card {
+    margin: 1rem;
+    padding: 1rem;
+    border: none;
+    transition: .3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 5px 5px 15px #000;
+}
+
+.add-btn {
+    display: block;
+    width: 80%;
+    margin: 1rem auto;
+    text-transform: capitalize;
+}
