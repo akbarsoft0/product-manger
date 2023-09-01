@@ -24,7 +24,7 @@ const Header = () => {
 
     const total = () => {
         let price = 0;
-        getData.map((ele, k) => {
+        getData.map((ele) => {
             price = ele.price * ele.qnty + price
         })
         setPrice(price);
