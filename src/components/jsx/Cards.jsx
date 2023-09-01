@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import './cards.css'
+import '../css/cards.css'
 import { Card, Button } from 'react-bootstrap';
-import Cardsdata from './CardsData';
+import Cardsdata from '../data/CardsData';
 import { useDispatch } from 'react-redux';
-import { Add } from './redux/actions/Action';
+import { Add } from '../redux/actions/Action';
 
 
 const Cards = () => {

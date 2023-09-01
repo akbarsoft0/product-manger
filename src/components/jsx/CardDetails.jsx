@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react'
-import './card-details.css'
+import '../css/card-details.css'
 import { Badge } from 'react-bootstrap'
 import DeleteIcon from '@mui/icons-material/Delete';
 import { IconButton } from '@mui/material';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { Dlt, Add, Remove } from './redux/actions/Action';
+import { Dlt, Add, Remove } from '../redux/actions/Action';
 
 
 
 const CardDetails = () => {
+
     const [data, setData] = useState([])
     const { id } = useParams();
 
@@ -60,7 +61,7 @@ const CardDetails = () => {
                                     <p><strong>dishes : </strong><span>{e.rname}</span></p>
                                     <p><strong>price : </strong><span>₹{e.price}</span></p>
                                     <p><strong>restaurant :</strong><span>{e.address}</span></p>
-                                    <p><strong>total : </strong><span>  ₹ 350</span></p>
+                                    <p><strong>total : </strong><span>₹ {e.price * e.qnty} </span></p>
                                     <ul>
                                         <li><button onClick={() => remove(e)}>-</button></li>
                                         <li><span>{e.qnty}</span></li>

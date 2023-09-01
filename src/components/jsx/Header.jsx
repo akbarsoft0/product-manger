@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import "./header.css"
+import "../css/header.css"
 import { Container, Nav, Navbar } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom';
 import { IconButton, Badge, Menu } from '@mui/material';
@@ -7,7 +7,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import CloseIcon from '@mui/icons-material/Close';
 import { useDispatch, useSelector } from 'react-redux';
 import DeleteIcon from '@mui/icons-material/Delete';
-import { Dlt } from './redux/actions/Action';
+import { Dlt } from '../redux/actions/Action';
 
 
 const Header = () => {
@@ -25,7 +25,7 @@ const Header = () => {
     const total = () => {
         let price = 0;
         getData.map((ele, k) => {
-            price = ele.price + price
+            price = ele.price * ele.qnty + price
         })
         setPrice(price);
     }

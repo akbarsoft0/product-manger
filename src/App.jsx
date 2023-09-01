@@ -1,10 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
-import Header from './components/Header';
+import Header from './components/jsx/Header';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import CardDetails from './components/CardDetails';
-import Cards from './components/Cards';
-import store from './Store';
+import CardDetails from './components/jsx/CardDetails';
+import Cards from './components/jsx/Cards';
+import store from './components/redux/Store';
 import { Provider } from 'react-redux';
 
 function App() {
